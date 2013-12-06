@@ -52,6 +52,8 @@ define(['jquery', 'D3', 'queue', 'moment','topojson'], function($, d3, queue, mo
             var path = d3.geo.path()
                 .projection(projection);
 
+            $('#spinner').hide();
+
             // draw the world map
             svg.append('g').attr('id','mapGroup');
             svg.select('#mapGroup').selectAll('path')
