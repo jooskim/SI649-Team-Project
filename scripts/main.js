@@ -32,7 +32,7 @@ define(['jquery', 'D3', 'queue', 'moment','topojson'], function($, d3, queue, mo
             function redrawMap(){
                 var projection = d3.geo.mercator()
                     .scale($(window).width()/7.647058824)
-                    .translate([$(window).width()/2, $(window).height()/2]);
+                    .translate([$(window).width()/2, 300]);
 
                 var path = d3.geo.path()
                     .projection(projection);
@@ -47,7 +47,7 @@ define(['jquery', 'D3', 'queue', 'moment','topojson'], function($, d3, queue, mo
 
             var projection = d3.geo.mercator()
                 .scale($(window).width()/7.647058824)
-                .translate([$(window).width()/2, $(window).height()/2]);
+                .translate([$(window).width()/2, 300]);
 
             var path = d3.geo.path()
                 .projection(projection);
