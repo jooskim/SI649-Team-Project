@@ -25,10 +25,106 @@
 <![endif]-->
 
 <!-- Add your site or application content here -->
-<div class="map">
-    <img src="images/spinner.gif" id="spinner">
+<div class="kviewer">
+    <a href=".">Kiva TeamViewer</a>
 </div>
+<div class="sectorLayer" >
+    <img src="images/spinner.gif" id="spinner">
+    <div class="btn-group" style="display: none">
+        <button type="button" class="btn btn-primary btn-default dropdown-toggle" data-toggle="dropdown">
+            Select a sector
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+            <li><a href="#" id="snapshotAgriculture" data-sys="agriculture">Agriculture</a></li>
+            <li><a href="#" id="snapshotArts" data-sys="arts">Arts</a></li>
+            <li><a href="#" id="snapshotClothing" data-sys="clothing">Clothing</a></li>
+            <li><a href="#" id="snapshotConstruction" data-sys="construction">Construction</a></li>
+            <li><a href="#" id="snapshotEducation" data-sys="education">Education</a></li>
+            <li><a href="#" id="snapshotEntertainment" data-sys="entertainment">Entertainment</a></li>
+            <li><a href="#" id="snapshotFood" data-sys="food">Food</a></li>
+            <li><a href="#" id="snapshotHealth" data-sys="health">Health</a></li>
+            <li><a href="#" id="snapshotHousing" data-sys="housing">Housing</a></li>
+            <li><a href="#" id="snapshotManufacturing" data-sys="manufacturing">Manufacturing</a></li>
+            <li><a href="#" id="snapshotPersonaluse" data-sys="personaluse">Personal Use</a></li>
+            <li><a href="#" id="snapshotRetail" data-sys="retail">Retail</a></li>
+            <li><a href="#" id="snapshotServices" data-sys="services">Services</a></li>
+            <li><a href="#" id="snapshotTransportation" data-sys="transportation">Transportation</a></li>
+            <li><a href="#" id="snapshotWholesale" data-sys="wholesale">Wholesale</a></li>
+        </ul>
 
+    </div>
 
+</div>
+<div class="map">
+    <div class="legendContainer">
+        <div class="legend">
+            <svg class="svgLegend"></svg>
+        </div>
+    </div>
+</div>
+<div class="scatter" style="transform: scale(0.7); ">
+    <div class="scatterHeader">
+    </div>
+    <div class="closeBox">
+        &times;
+    </div>
+    <div class="tooltipContainer">
+        <div class="arrow">
+        </div>
+        <div class="arrow2">
+        </div>
+        <div class="teamTooltip">
+            <div class="memberCount"></div>
+            <div class="loanedAmount"></div>
+            <div class="teamName"></div>
+            <div class="shortDesc"></div>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="comparisonPanel">
+            <div class="comp" id="1">
+                <div class="comp_close"></div>
+                <div class="comp_teamName"></div>
+                <div class="comp_top5countries"></div>
+                <div class="comp_top5sectors"></div>
+            </div>
+            <div class="comp" id="2">
+                <div class="comp_close"></div>
+                <div class="comp_teamName"></div>
+                <div class="comp_top5countries"></div>
+                <div class="comp_top5sectors"></div>
+            </div>
+            <div class="comp" id="3">
+                <div class="comp_close"></div>
+                <div class="comp_teamName"></div>
+                <div class="comp_top5countries"></div>
+                <div class="comp_top5sectors"></div>
+            </div>
+            <div class="comp" id="4">
+                <div class="comp_close"></div>
+                <div class="comp_teamName"></div>
+                <div class="comp_top5countries"></div>
+                <div class="comp_top5sectors"></div>
+            </div>
+        </div>
+    </div>
+    <div class="tooltipContainer2">
+        <div class="C_tooltip"></div>
+    </div>
+
+</div>
+<div class="placeholder">
+    Select a sector and then click a country on the map
+</div>
+<div class="loadingContainer">
+    <div class="loading">
+        Loading data
+    </div>
+</div>
+<div class="footer">
+    Rishabh Gandotra, Nicolas Hung, Joosung Kim, Somesh Rahul
+</div>
 </body>
 </html>

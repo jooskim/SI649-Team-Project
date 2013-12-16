@@ -1,7 +1,267 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400);
+
 body {
     margin: 0;
+    font-family: Lato;
+}
+
+.sectorLayer {
+    position: relative;
+    top: 17px;
+    float: right;
+    padding-right: 30px;
+}
+.sectorLayer button {
+    width: 160px;
+}
+
+.placeholder {
+    text-align: center;
+    position: relative;
+    top: 100px;
+    width: 100%;
+    font-size: 28px;
+    font-weight: 300;
+}
+
+.kviewer {
+    absolute: relative;
+    font-size: 2.5em;
+    letter-spacing: -1px;
+    font-weight: 300;
+    padding-left: 10px;
+    padding-top: 5px;
+    float: left;
+    height: 40px;
+}
+
+.kviewer a {
+    text-decoration: none;
+    color: #000;
+}
+
+.sectorLayer ul li {
+    text-align: left;
 }
 
 .map {
+    position: relative;
+    top: 70px;
     width: 100%;
+    height: 600px;
+}
+
+.legendContainer {
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 500px;
+    left: 10px;
+    display: none;
+    float: left;
+}
+
+.legendContainer .legend {
+    position: relative;
+    width: 320px;
+    height: 80px;
+    float: left;
+}
+
+.scatter {
+
+}
+
+.scatter .closeBox {
+    position: relative;
+    right: 1em;
+    top: 0.3em;
+    width: 10px;
+    height: 10px;
+    color: #888;
+    cursor: pointer;
+    float: right;
+    font-size: 2em;
+}
+
+.scatter .scatterHeader {
+    font-family: Lato;
+    font-size: 1.5em;
+    letter-spacing: -1px;
+    font-weight: bold;
+    padding: 0.9em;
+    float: left;
+}
+
+.scatter .container {
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 78px;
+    float: right;
+}
+
+.scatter .container .comparisonPanel {
+    position: relative;
+    width: 10px;
+    height: 730px;
+}
+
+.scatter .container .comparisonPanel .comp {
+    position: relative;
+    width: 100%;
+    height: 170px;
+    margin-bottom: 10px;
+    border: 1px dashed #bbbbbb;
+}
+
+.scatter .container .comparisonPanel .comp .comp_label {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.scatter .container .comparisonPanel .comp .comp_close {
+    float: right;
+    padding: 5px;
+    cursor: pointer;
+    color: #428bca;
+    font-size: 15px;
+}
+
+.scatter .container .comparisonPanel .comp .comp_teamName {
+    color: #428bca;
+    padding: 5px;
+    font-size: 13px;
+    letter-spacing: -1;
+}
+
+.scatter .container .comparisonPanel .comp .comp_top5countries,
+.scatter .container .comparisonPanel .comp .comp_top5sectors {
+    font-size: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.scatter .tooltipContainer {
+    position: absolute;
+    float: left;
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+.scatter .tooltipContainer .arrow {
+    border-top: solid transparent 7px;
+    border-bottom: solid transparent 7px;
+    border-right: solid rgba(66,139,202,0.8) 15px;
+    left: -15px;
+    top: 56px;
+    position: relative;
+    z-index: 2;
+
+}
+
+.scatter .tooltipContainer .arrow2 {
+    border-top: solid transparent 7px;
+    border-bottom: solid transparent 7px;
+    border-right: solid #ffffff 15px;
+    left: -13px;
+    top: 42px;
+    z-index: 1;
+    position: relative;
+
+}
+
+.scatter .tooltipContainer .teamTooltip {
+    background-color: rgba(255,255,255,0.8);
+    border: 1px solid rgba(66,139,202,0.8);
+    position: relative;
+    width: 400px;
+    height: 100px;
+}
+
+.scatter .tooltipContainer .teamTooltip .teamName {
+    position: relative;
+    display: block;
+    font-size: 16px;
+    letter-spacing: -1px;
+    color: #428bca;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.scatter .tooltipContainer .teamTooltip .memberCount, .scatter .tooltipContainer .teamTooltip .loanedAmount {
+    position: relative;
+    float: right;
+    display: block;
+    font-size: 14px;
+    letter-spacing: -1px;
+    color: #428bca;
+    padding-right: 15px;
+    padding-top: 10px;
+}
+
+.scatter .tooltipContainer .teamTooltip .shortDesc {
+    position: relative;
+    font-size: 11px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+.tooltipContainer2 {
+    position: absolute;
+    float: left;
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+.tooltipContainer2 .C_tooltip {
+    position: absolute;
+    float: right;
+    width: 150px;
+    height: 25px;
+    background-color: #666;
+    color: #fff;
+}
+
+.userInput {
+    color: #428bca;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    height: 25px;
+    width: 100%;
+    background-color: #444444;
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.loadingContainer {
+    position: absolute;
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+.loadingContainer .loading {
+    background-color: rgba(0,0,0,0.5);
+    width: 150px;
+    color: white;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+    text-shadow: 0 2px 1px 1px #666;
 }
